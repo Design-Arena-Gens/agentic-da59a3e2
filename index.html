@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>????? ?????? ??????</title>
+    <meta name="description" content="???????? ??? ?????-?????? ?????? ????? ?? ??????? ????" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>????? ?????? ??????</h1>
+        <p class="tag">??????? ?? ???? ???? ????? ??? ?????</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel controls">
+        <div class="grid">
+          <label>
+            <span>??????</span>
+            <input id="titleInput" type="text" placeholder="???: ????? ???" value="????? ???" />
+          </label>
+          <label>
+            <span>?????? ?? ???</span>
+            <input id="nameInput" type="text" placeholder="???: ???" value="???" />
+          </label>
+          <label>
+            <span>???</span>
+            <select id="themeSelect">
+              <option value="fantasy" selected>???????</option>
+              <option value="action">?????</option>
+              <option value="romance">??????</option>
+              <option value="scifi">???-???</option>
+            </select>
+          </label>
+          <label>
+            <span>???</span>
+            <select id="moodSelect">
+              <option value="epic" selected>????</option>
+              <option value="calm">????</option>
+              <option value="mysterious">????????</option>
+              <option value="happy">???????</option>
+            </select>
+          </label>
+          <label>
+            <span>???? (?????)</span>
+            <input id="durationInput" type="number" min="5" max="60" step="1" value="20" />
+          </label>
+          <label>
+            <span>???????????</span>
+            <select id="resSelect">
+              <option value="1280x720" selected>1280?720 (HD)</option>
+              <option value="1920x1080">1920?1080 (Full HD)</option>
+              <option value="720x720">720?720 (Square)</option>
+            </select>
+          </label>
+          <label>
+            <span>FPS</span>
+            <select id="fpsSelect">
+              <option value="30" selected>30</option>
+              <option value="24">24</option>
+              <option value="60">60</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions">
+          <button id="previewBtn" class="btn">???????? ?????</button>
+          <button id="recordBtn" class="btn primary">?????? ??????? ????</button>
+          <button id="stopBtn" class="btn danger" disabled>?????</button>
+        </div>
+        <p class="hint">???: ?????????? ?? ????? ????? ?? ??? ???????? ?????? ????</p>
+      </section>
+
+      <section class="panel stage">
+        <div class="stage-wrap">
+          <canvas id="scene"></canvas>
+          <div class="overlay" id="overlayMsg">?????...</div>
+        </div>
+      </section>
+
+      <section class="panel output">
+        <div class="output-grid">
+          <div>
+            <h3>??????</h3>
+            <video id="videoPreview" controls playsinline></video>
+          </div>
+          <div>
+            <h3>???????</h3>
+            <a id="downloadLink" class="btn ghost" href="#" download="anime-video.webm">?????? ???? ?? ??????? ????</a>
+            <div class="meta" id="metaInfo"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container small">Made for you ? ???????? ??? ???? ??, ??? ????? ?????</div>
+    </footer>
+
+    <script defer src="./app.js"></script>
+  </body>
+</html>
